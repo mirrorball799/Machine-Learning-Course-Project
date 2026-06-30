@@ -15,7 +15,6 @@
 ```
 course_project/
 ├── main.py                     # 主入口
-├── run_ablation.py             # 消融实验入口
 ├── requirements.txt
 │
 ├── data/                       # 数据文件
@@ -29,8 +28,7 @@ course_project/
 ├── models/
 │   ├── lstm_model.py           # LSTM Seq2Seq
 │   ├── transformer_model.py    # Transformer Encoder-Decoder
-│   ├── improved_model.py       # SCA-Net (改进模型)
-│   └── ablation_models.py      # 消融实验变体
+│   └── improved_model.py       # SCA-Net (改进模型)
 │
 ├── training/
 │   └── trainer.py              # 训练循环 + 多GPU + 早停
@@ -43,8 +41,7 @@ course_project/
     ├── run_lstm.sh             # LSTM 实验
     ├── run_transformer.sh      # Transformer 实验
     ├── run_sca.sh              # SCA-Net 实验
-    ├── run_all.sh              # 全部模型
-    └── run_ablation.sh         # 消融实验
+    └── run_all.sh              # 全部模型
 ```
 
 ## 快速开始
@@ -69,13 +66,3 @@ bash scripts/run_all.sh both
 - 原始电力数据需从 [UCI Repository](https://archive.ics.uci.edu/dataset/235/individual+household+electric+power+consumption) 下载，放置于项目父目录
 - 天气数据已包含在 `data/weather_monthly.csv`，来源 Météo-France
 
-
-## 环境
-
-| 项目 | 版本 |
-|------|------|
-| Python | 3.12 |
-| PyTorch | 2.9+ (CUDA 12.8) |
-| pandas | 2.x |
-| numpy | 1.x |
-| matplotlib | 3.x |
